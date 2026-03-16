@@ -20,6 +20,9 @@ app.get('/usuarios', (req, res) => {
 })
 
 
+
+
+
 app.get('/usuarios/:id', (req, res) => {
     const id = parseInt(req.params.id)
 
@@ -28,7 +31,7 @@ app.get('/usuarios/:id', (req, res) => {
     const usuario = usuarios.find(u => u.id === id)
 
     if (!usuario) {
-        return res.status(404).json({ erro: "Usuário não encontrado" })
+        return res.status(404).json({ erro: "Usuário não encontrado!" })
     }
 
     res.json(usuario)
